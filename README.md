@@ -42,8 +42,77 @@ else:
 
 
 ```
+```python 
+''' 
+Program to find the element in a list using Binary Search(Iterative Method)..
+Developed by: your name:s.jegadeesh
+RegisterNumber: 22004355
+'''
+def binarySearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+            
+        elif array[mid]<k:
+            low=mid+1
+            
+        else:
+            high=mid-1
+    return -1
+array=eval(input())
+array.sort()
+k=eval(input())
+result=binarySearchIter(array,k,0,len(array)-1)
+if(result==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
+```
+```python
+''' 
+Program to find the element in a list using Binary Search (recursive Method).
+Developed by: your name:s.jegadeesh
+RegisterNumber: 22004355
+'''
+def BinarySearch(arr, k, low, high):
+    if high>= low:
+        mid=low+(high-low)//2
+        
+        if arr[mid]==k:
+            return mid
+            
+        elif arr[mid]>k:
+            return BinarySearch(arr,k,low,mid-1)
+            
+        else:
+            return BinarySearch(arr,k,mid+1,high)
+            
+    return -1
+arr=eval(input())
+arr.sort()
+k=eval(input())
+result=BinarySearch(arr,k,0,len(arr)-1)
+if(result==-1):
+    print(arr)
+    print("Element not found")
+else:
+    print(arr)
+    print("Element found at index: ",result)
+
+    
+```
+
+
+        
+            
+   
 ## Sample Input and Output
 ![OUTPUT](OUTPUTE.png)
+![OUTPUT](LJ.png)
+![OUTPUT](KI.png)
 
 
 
